@@ -3,8 +3,13 @@ package com.kstu.thesis.repository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface DataRepository {
+open class DataRepository {
 
-    fun findByPattern(text: String): DataEntity
+    fun findByPattern(text: String): DataEntity {
+        return DataEntity(
+            data = "",
+            searchName = ""
+        )
+    }
 
 }
