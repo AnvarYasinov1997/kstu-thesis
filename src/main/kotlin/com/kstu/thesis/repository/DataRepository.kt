@@ -1,4 +1,10 @@
-package com.kstu.thesis
+package com.kstu.thesis.repository
 
-class Repository {
+import org.springframework.stereotype.Repository
+
+@Repository
+interface DataRepository {
+
+    fun findByPattern(text: String): DataEntity
+
 }

@@ -1,4 +1,6 @@
 package com.kstu.thesis.repository
 
-class DataEntity {
-}
+data class DataEntity(
+    val searchName: String,
+    val data: String
+)
