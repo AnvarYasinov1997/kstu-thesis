@@ -50,7 +50,6 @@ class ChooseController @Autowired constructor(
         val transitionData = cacheService.getData("choose", ChooseTransitionData::class.java)
         val question = transitionData.questions[transitionData.currentQuestionNumber.toString()]
         changeUIState {
-
             if (question == null) {
                 val questionId = transitionData.answersCheckSum.substringBefore("-").toLong()
                 val checkSum = transitionData.answersCheckSum.substringAfter("-")
