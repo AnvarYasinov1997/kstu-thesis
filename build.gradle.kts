@@ -26,9 +26,19 @@ dependencies {
     api("net.rgielen:javafx-weaver-spring-boot-starter:1.3.0")
     api("org.springframework.boot:spring-boot-configuration-processor")
     kapt("org.springframework.boot:spring-boot-configuration-processor")
-    api("com.fasterxml.jackson.core:jackson-databind:2.12.3")
+
     api("com.fasterxml.jackson.core:jackson-core:2.12.3")
+    api("com.fasterxml.jackson.core:jackson-databind:2.12.3")
+    api("com.fasterxml.jackson.core:jackson-annotations:2.12.3")
     api("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.3")
+
+    api("org.springframework.data:spring-data-r2dbc:1.0.0.RELEASE")
+    api("org.springframework.boot:spring-boot-starter-jdbc")
+    api("io.projectreactor.netty:reactor-netty:0.9.12.RELEASE")
+    api("io.r2dbc:r2dbc-postgresql:0.8.4.RELEASE")
+    api("io.r2dbc:r2dbc-pool:0.8.4.RELEASE")
+    api("org.flywaydb:flyway-core")
+    api("org.postgresql:postgresql")
 }
 
 configure<JavaPluginConvention> {

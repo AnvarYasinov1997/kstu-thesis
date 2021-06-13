@@ -6,14 +6,14 @@ import java.util.concurrent.ConcurrentHashMap
 @Component
 open class CacheService {
 
-    private val cache = ConcurrentHashMap<String, String>()
+    private val cache = ConcurrentHashMap<String, Any>()
 
-    fun putData(key: String, value: String) {
+    fun putData(key: String, value: Any) {
         cache[key.toUpperCase()] = value
     }
 
-    fun getData(value: String): String {
-        return cache[value.toUpperCase()].let(::requireNotNull)
+    fun <T> getData(key: String, type: Class<T>): T {
+        return cache[key.toUpperCase()].let(type::cast)
     }
 
 }

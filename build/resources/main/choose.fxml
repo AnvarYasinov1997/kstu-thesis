@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.kstu.thesis.controller.ChooseController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.text.*?>
 
-    <Label fx:id="questionTitle"/>
+<GridPane fx:controller="com.kstu.thesis.controller.ChooseController"
+          prefWidth="400"
+          prefHeight="400"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
-</AnchorPane>
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+
+    <Label fx:id="questionTitle" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+    <Button fx:id="yesButton" text="Да" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+    <Button fx:id="noButton" text="Нет" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Button fx:id="returnButton" text="Вернуться" GridPane.columnIndex="1" GridPane.rowIndex="0" visible="false"/>
+
+</GridPane>

@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 interface NavigationService {
-    fun navigateScreen(screen: Screen, data: String? = null)
+    fun navigateScreen(screen: Screen, data: Any? = null)
 }
 
 interface NavigationServiceConfigurer {
@@ -28,7 +28,7 @@ open class DefaultNavigationService @Autowired constructor(
 
     private lateinit var primaryStage: Stage
 
-    override fun navigateScreen(screen: Screen, data: String?) {
+    override fun navigateScreen(screen: Screen, data: Any?) {
         when (screen) {
             is Screen.Main -> {
                 newScreen(fxWeaver.loadView(MainController::class.java))

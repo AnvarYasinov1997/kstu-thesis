@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/test
+    username: anvaryasinov
+    password: postgres
+  jpa:
+    database: postgresql
+  profiles:
+    active: stage
+  flyway:
+    placeholder-replacement: true
+    out-of-order: true
+    baseline-on-migrate: true
+  transaction:
+    default-timeout: 90
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: auth
+
+
+database:
+  url: localhost
+  username: anvaryasinov
+  password: postgres
+  dbName: test
+  port: 5432
